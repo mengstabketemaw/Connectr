@@ -1,4 +1,3 @@
-
 const mongoose = require('./mongoose');
 const Schema = mongoose.Schema;
 
@@ -17,7 +16,7 @@ const UserSchema = new Schema({
   favorites: [{ type: Schema.ObjectId, ref: 'rooms' }],
   tagLine: {
     type: String,
-    default: 'New Connectr User',
+    default: 'New Clover User',
   },
   picture: { type: Schema.ObjectId, ref: 'images' },
   lastOnline: {
