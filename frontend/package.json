@@ -1,6 +1,6 @@
 {
   "name": "clover",
-  "author": "Honeyside",
+  "author": "mengstab",
   "version": "2.8.4",
   "private": true,
   "scripts": {
@@ -38,7 +38,7 @@
     "jwt-decode": "^3.1.2",
     "mediasoup-client": "^3.6.84",
     "moment": "^2.29.1",
-    "node-sass": "^7.0.1",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-data-table-component": "^7.4.1",
     "react-div-100vh": "^0.7.0",
@@ -58,6 +58,7 @@
     "striptags": "^3.2.0",
     "styled-components": "^5.3.1",
     "uikit": "^3.7.6",
+    "vanta": "^0.5.24",
     "xss": "^1.0.6"
   },
   "devDependencies": {

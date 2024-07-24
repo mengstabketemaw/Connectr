@@ -1,6 +1,6 @@
 import './TopBar.sass';
 import {
-  FiMoreHorizontal, FiExternalLink, FiSettings, FiHome, FiPlusCircle, FiCpu,
+  FiMoreHorizontal, FiSettings, FiHome, FiPlusCircle, FiCpu,
 } from 'react-icons/fi';
 import { useGlobal } from 'reactn';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -21,12 +21,6 @@ function TopBar() {
   const setAudio = useGlobal('audio')[1];
   const setVideo = useGlobal('video')[1];
   const setCallDirection = useGlobal('callDirection')[1];
-
-  const honeyside = () => window.open('https://www.honeyside.it', '_blank');
-  const codeCanyon = () => window.open(
-    'https://codecanyon.net/item/clover-realtime-messaging-audio-video-conferencing-web-app-nodejs-react-webrtc-socketio/25737452',
-    '_blank',
-  );
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -130,22 +124,6 @@ function TopBar() {
               New Group
             </div>
             {Config.demo && <div className="divider" />}
-            {Config.demo && (
-              <div className="link" onClick={honeyside}>
-                Honeyside
-                <div className="icon">
-                  <FiExternalLink />
-                </div>
-              </div>
-            )}
-            {Config.demo && (
-              <div className="link" onClick={codeCanyon}>
-                CodeCanyon
-                <div className="icon">
-                  <FiExternalLink />
-                </div>
-              </div>
-            )}
             {(user.level === 'root' || user.level === 'admin') && <div className="divider" />}
             {(user.level === 'root' || user.level === 'admin') && (
               <div

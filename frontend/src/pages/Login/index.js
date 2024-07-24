@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useGlobal } from 'reactn';
 import { Link, useNavigate } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import { useDispatch } from 'react-redux';
 import { useToasts } from 'react-toast-notifications';
 import Div100vh from 'react-div-100vh';
+import BIRDS from 'vanta/dist/vanta.birds.min';
 import Credits from './components/Credits';
 import Logo from './components/Logo';
 import Input from './components/Input';
@@ -20,6 +21,8 @@ function Login() {
   const dispatch = useDispatch();
   const { addToast } = useToasts();
   const [info, setInfo] = useState({});
+  const [vantaEffect, setVantaEffect] = useState(null);
+  const effectRef = useRef();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,6 +42,17 @@ function Login() {
   const [entryPath, setEntryPath] = useGlobal('entryPath');
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(BIRDS({
+        el: effectRef.current,
+      }));
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
   useEffect(() => {
     if (window.self !== window.top) {
@@ -125,7 +139,7 @@ function Login() {
 
   return (
     <Div100vh>
-      <div className="login uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-overflow-hidden uk-light">
+      <div ref={effectRef} className="login uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-overflow-hidden uk-light">
         <div className="uk-position-cover uk-overlay-primary" />
         <div className="login-scrollable uk-flex uk-flex-center uk-flex-middle uk-position-z-index">
           <Credits />
@@ -253,29 +267,10 @@ function Login() {
             </div>
 
             <form className="toggle-credits uk-text-center" hidden>
-              <span>
-                Everyone has a sweet side
-                <br />
-                Everything can taste like honey
-                <br />
-              </span>
-              <br />
-              Special thanks to all of the people who believed that Clover was possible and who made it possible.
-              <br />
-              <br />
-              This Login / Register page uses
+              The default background animation is from vanta.js
               {' '}
-              <a href="https://github.com/zzseba78/Kick-Off" target="_blank" rel="noopener noreferrer">
-                Kick-Off
-              </a>
-              {' '}
-              by zzseba78
-              <br />
-              <br />
-              The default background image is from
-              {' '}
-              <a href="https://picsum.photos/" target="_blank" rel="noopener noreferrer">
-                Picsum Photos
+              <a href="https://www.vantajs.com/" target="_blank" rel="noopener noreferrer">
+                Home Animation
               </a>
               <br />
               <br />

@@ -1,23 +1,18 @@
 import './BottomBar.sass';
-import { useGlobal } from 'reactn';
-import Config from '../../../config';
 
 function BottomBar() {
-  const version = useGlobal('version')[0];
-
   return (
     <div className="bottom-bar uk-flex uk-flex-between uk-flex-middle">
       <div className="profile" />
       <div className="nav">
         <div className="button">
-          {Config.appName}
+          Connectr
           {' '}
-          v
-          {version}
+          v1.0
           {' '}
           -
-          <a href="https://www.honeyside.it" target="_blank" rel="noreferrer">
-            {Config.brand}
+          <a href="https://www.mengstab.dev" target="_blank" rel="noreferrer">
+            mengstab.dev
           </a>
         </div>
       </div>

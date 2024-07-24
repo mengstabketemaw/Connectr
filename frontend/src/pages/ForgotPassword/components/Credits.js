@@ -1,6 +1,3 @@
-import { useGlobal } from 'reactn';
-import Config from '../../../config';
-
 function Credits() {
   return (
     <span>
@@ -17,16 +14,13 @@ function Credits() {
 }
 
 function Copyright() {
-  const version = useGlobal('version')[0];
   return (
     <div id="copyright" className="uk-position-bottom-center uk-position-small uk-visible@m uk-position-z-index">
       <span className="uk-text-small uk-text-muted">
-        © 2020
-        {Config.brand || 'Honeyside'}
-        {Config.showCredits && <Credits />}
+        © 2024 mengstab.dev
+        <Credits />
         {' '}
-        - v
-        {version}
+        - v1.0
       </span>
     </div>
   );

@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Honeyside/Clover.git"
+    "url": "git+https://github.com/mengstabketemaw/Clover.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/Honeyside/Clover/issues"
+    "url": "https://github.com/mengstabketemaw/Clover/issues"
   },
-  "homepage": "https://github.com/Honeyside/Clover#readme",
+  "homepage": "https://github.com/mengstabketemaw/Clover#readme",
   "dependencies": {
     "argon2": "^0.31.1",
     "bluebird": "^3.7.1",

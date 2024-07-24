@@ -55,7 +55,7 @@ router.post('*', async (req, res) => {
   const entry = Email({
     from: config.nodemailer.from,
     to: user.email,
-    subject: `${config.appTitle || config.appName || 'Clover'} - Password changed`,
+    subject: `${config.appTitle || config.appName || 'Connectr'} - Password changed`,
     html: `<p>Hello ${user.firstName},<br/><br/>Your password has been changed!<br/><br/>Timestamp: ${moment().format(
       'HH:mm - D MMMM YYYY',
     )}</p>`,

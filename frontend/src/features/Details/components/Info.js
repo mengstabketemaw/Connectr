@@ -1,11 +1,7 @@
 import './Info.sass';
-import { useGlobal } from 'reactn';
 import logo from '../../../assets/logo.png';
-import Config from '../../../config';
 
 function Info() {
-  const version = useGlobal('version')[0];
-
   return (
     <div className="info">
       <div className="top">
@@ -15,11 +11,10 @@ function Info() {
         <div className="text">
           Welcome to
           {' '}
-          {Config.appName || 'Clover'}
-          !
+          Connectr!
           <br />
           <br />
-          {Config.appName || 'Clover'}
+          Connectr
           {' '}
           is a messaging app that enables real-time messaging, audio and video calls,
           groups and conferencing.
@@ -28,10 +23,9 @@ function Info() {
       <div className="text">
         Copyright &copy;
         {' '}
-        {Config.brand || 'Honeyside'}
+        mengstab.dev
         <br />
-        v
-        {version}
+        v1.0
       </div>
     </div>
   );

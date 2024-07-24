@@ -122,14 +122,15 @@ module.exports = () => {
       `mongodb${mongo.srv ? '+srv' : ''}://${mongo.username}:${encodeURIComponent(mongo.password)}@${mongo.hostname}:${
         mongo.port
       }/${mongo.database}?authSource=${mongo.authenticationDatabase}`;
-
+    
+      console.log(uri);
     mongoose.set('strictQuery', false);
 
     mongoose
       .connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        ssl: false,
+        ssl: true,
         family: 4,
       })
       .then(() => {
