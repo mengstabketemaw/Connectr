@@ -1,6 +1,6 @@
 {
-  "name": "clover",
-  "version": "2.8.4",
+  "name": "connectr",
+  "version": "1.0.0",
   "description": "WebRTC conferencing platform.",
   "main": "index.js",
   "private": true,
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mengstabketemaw/Clover.git"
+    "url": "git+https://github.com/mengstabketemaw/connectr.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/mengstabketemaw/Clover/issues"
+    "url": "https://github.com/mengstabketemaw/connectr/issues"
   },
-  "homepage": "https://github.com/mengstabketemaw/Clover#readme",
+  "homepage": "https://github.com/mengstabketemaw/connectr#readme",
   "dependencies": {
     "argon2": "^0.31.1",
     "bluebird": "^3.7.1",
